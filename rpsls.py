@@ -18,19 +18,17 @@ import random
 
 def name_to_number(name):
    if name=='石头':
-	   a=input = 0
+	   return 0
    elif name=='史波克':
-	   a=input = 1
+	   return 1
    elif name=='纸':
-	   a=input = 2
+	   return 2
    elif name=='蜥蜴':
-	   a=input = 3
+	   return 3
    elif name=='剪刀':
-	   a=input = 4
+	   return 4
    else:
-	   print("Error: No Correct Name")
-   return a
-
+       return 5
 
 def number_to_name(number):
    if number==0:
@@ -71,6 +69,7 @@ print("欢迎使用RPSLS游戏")
 print("----------------")
 print("请输入您的选择:")
 choice_name=input()
-rpsls(choice_name)
-
-
+if name_to_number(choice_name) == 5:
+	print("No Correct Name!")
+else:
+    rpsls(choice_name)
